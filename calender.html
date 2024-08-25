@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Scheduling Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calendar-container">
+        <h1 class="calendar-title">Available Interview Slots</h1>
+        <div class="calendar-header">
+            <button class="prev-button" onclick="prevMonth()">&#x276E;</button>
+            <h2 id="month-year"></h2>
+            <button class="next-button" onclick="nextMonth()">&#x276F;</button>
+        </div>
+        <div class="calendar">
+            <div class="day-header">Sun</div>
+            <div class="day-header">Mon</div>
+            <div class="day-header">Tue</div>
+            <div class="day-header">Wed</div>
+            <div class="day-header">Thu</div>
+            <div class="day-header">Fri</div>
+            <div class="day-header">Sat</div>
+            <!-- Days will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Modal for scheduling interview -->
+    <div id="schedule-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Schedule Your Interview</h2>
+            <form id="schedule-form">
+                <div class="form-group">
+                    <label for="interview-date">Date:</label>
+                    <input type="text" id="interview-date" name="interview-date" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="interview-time">Time:</label>
+                    <input type="time" id="interview-time" name="interview-time" required>
+                </div>
+                <div class="form-group">
+                    <label for="interview-candidate">Candidate Name:</label>
+                    <input type="text" id="interview-candidate" name="interview-candidate" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="schedule-button">Schedule Interview</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

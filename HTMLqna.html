@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Test Platform</title>
+    <link rel="stylesheet" href="qna.css">
+</head>
+<body>
+    <div class="header">
+        <div class="page-index" id="pageIndex">Question 1 of 5</div>
+        <button class="submit-btn" onclick="submitTest()">Submit</button>
+    </div>
+    <div class="content">
+        <div class="question-container">
+            <div id="question">Question 1: What is the capital of France?</div>
+        </div>
+        <textarea id="answer" placeholder="Write your answer here..."></textarea>
+        <div class="navigation">
+            <button onclick="previousQuestion()">Previous</button>
+            <button onclick="nextQuestion()">Next</button>
+        </div>
+    </div>
+    <script src="qna.js"></script>
+</body>
+</html>
