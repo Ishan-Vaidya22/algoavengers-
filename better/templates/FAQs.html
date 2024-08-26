@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRDO FAQs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 20px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .faq {
+            margin-bottom: 15px;
+        }
+
+        .faq button {
+            width: 100%;
+            background-color: #67a1e0;
+            color: white;
+            padding: 15px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .faq button:hover {
+            background-color: #67a1e0;
+        }
+
+        .faq-content {
+            padding: 15px;
+            display: none;
+            background-color: #f1f1f1;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .faq-content a {
+            color: #91c0f3;
+            text-decoration: none;
+        }
+
+        .faq-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <h1>DRDO FAQs</h1>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search FAQs..." onkeyup="filterFAQs()">
+        </div>
+
+        <div class="faq" data-question="How can I join DRDO?">
+            <button onclick="toggleFaq(this)">1. How can I join DRDO?</button>
+            <div class="faq-content">
+                <p>DRDO has Recruitment and Assessment Centre (RAC) for Scientists (Group 'A' Class I Gazetted Post) recruitment and CEPTAM for recruitment of DRTC, Admin & Allied Cadre (Group ‘B’ and Group ‘C’) recruitment.</p>
+            </div>
+        </div>
+        
+        <div class="faq" data-question="I have some experience in Research & Development in the areas of interest to DRDO. Can I join DRDO at a higher post?">
+            <button onclick="toggleFaq(this)">2. I have some experience in Research & Development in the areas of interest to DRDO. Can I join DRDO at a higher post?</button>
+            <div class="faq-content">
+                <p>Apart from inducting Scientists 'B' (Entry Level), DRDO has following schemes for inducting Scientists 'C' and above (upto Scientist 'G') based on number of years of experience:</p>
+                <ul>
+                    <li>Lateral Recruitment for Scientist 'C' and above as per requirement of the Labs. (Through Advertisement)</li>
+                    <li>Talent Search Scheme (NRIs) for Scientist 'C' and above subject to suitability in DRDO Labs.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="faq" data-question="How can I contact DRDO for my recruitment related queries?">
+            <button onclick="toggleFaq(this)">3. How can I contact DRDO for my recruitment related queries?</button>
+            <div class="faq-content">
+                <p>Go to the webpage <a href="https://www.drdo.gov.in" target="_blank">www.drdo.gov.in</a></p>
+            </div>
+        </div>
+        
+        <div class="faq" data-question="I am a research scholar, how can I know about project sponsorships/scholarship/project grants opportunities?">
+            <button onclick="toggleFaq(this)">4. I am a research scholar, how can I know about project sponsorships/scholarship/project grants opportunities?</button>
+            <div class="faq-content">
+                <p>Go to the webpage <a href="https://www.drdo.gov.in" target="_blank">www.drdo.gov.in</a></p>
+            </div>
+        </div>
+        
+        <div class="faq" data-question="Any experience required to be a scientist in DRDO?">
+            <button onclick="toggleFaq(this)">5. Any experience required to be a scientist in DRDO?</button>
+            <div class="faq-content">
+                <p>No experience required for the post of Scientist B (entry level). And for other Scientist post, there is experience needed respectively as per guidelines. Go to website <a href="https://rac.gov.in" target="_blank">https://rac.gov.in</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        function filterFAQs() {
+            const query = document.getElementById('search').value.toLowerCase();
+            const faqs = document.querySelectorAll('.faq');
+            faqs.forEach(faq => {
+                const question = faq.getAttribute('data-question').toLowerCase();
+                if (question.includes(query)) {
+                    faq.style.display = 'block';
+                } else {
+                    faq.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
+
