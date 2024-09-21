@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRDO Login Form</title>
+    <link rel="stylesheet" href="{% static 'css/application_form2.css'%}">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <img src="logo.png" alt="DRDO Logo" class="logo">
+            <h2>RECRUITMENT & ASSESSMENT CENTRE</h2>
+            <h3>DRDO, Ministry of Defence</h3>
+            <p>Delhi, India</p>
+            <div class="formats">
+                <h4>CERTIFICATE / DECLARATION FORMATS</h4>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="login-box">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <input type="date" id="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label>10th Roll No</label>
+                        <input type="text" id="rollNo" placeholder="10th Roll No" required>
+                    </div>
+                    <div class="form-group">
+                        <label>10th Passing Year</label>
+                        <select id="passingYear">
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                        </select>
+                    </div>
+                    <h4>OR</h4>
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="text" id="mobile" placeholder="Mobile Number" required>
+                    </div>
+                    <h4>OR</h4>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Enter CAPTCHA</label>
+                        <input type="text" id="captchaInput" placeholder="Enter CAPTCHA" required>
+                        <img src="captcha.png" alt="Captcha" class="captcha-img">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="login-btn">Login</button>
+                    </div>
+                    <div class="forgot">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Example validation
+            const dob = document.getElementById('dob').value;
+            const rollNo = document.getElementById('rollNo').value;
+            const mobile = document.getElementById('mobile').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (!dob || !rollNo || !mobile || !email || !password) {
+                alert('All fields are required!');
+                return;
+            }
+            
+            // Proceed with form submission or AJAX call
+            console.log('Form Submitted');
+        });
+    </script>
+</body>
+</html>
+
