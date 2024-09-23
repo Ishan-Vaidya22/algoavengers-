@@ -1,2 +1,11 @@
 # algoavengers-
-Background: Recruitment and Assessment Centre (RAC) under DRDO, Ministry of Defence carries out interviews for applications received against advertised vacancies and for promotion to next higher grade for scientific manpower inducted within DRDO. Description: The process of interviewing is a challenging task. An unbiased objective interviewing process helps identify the right talent. The basic process of an interview involves posing a set of questions by an interviewer and thereafter evaluating responses from candidates. Thus, the questions asked should be relevant and match the area/ expertise of the applicant and the responses should also be of relevance w.r.t. the question asked. Expected Solution: The proposed solution should provide experts as well as candidates a real life Board Room experience, starting with initial ice-breaking questions leading to in-depth techno-managerial (depending on the level of candidate) questions. It shall also be able to provide a quantifiable score for experts as well as the candidate for the relevancy of questions w.r.t. the area/ expertise of the applicant. Similarly, candidate responses should also be graded for relevancy w.r.t. the question asked, finally assisting in arriving at an overall score for the subject knowledge of the candidate and thus his/ her suitability against the advertised post.
+Kindly follow the below procedure to see the implementation:
+1. first set up the environment and install django in it.
+2. then download all of the given files except readme.
+3. now unzip them in a common folder and open the folder in vs code
+4. open the cmd in vs code and open the environment by typing in the command "workon (your environment name)"
+5. now type the command 'python manage.py runserver' once you are in the environment.
+6. now follow the ip address in the cmd.
+7. it will take you to our website. This is our half of the implenentation.
+8. in the posts section we've only added the 'scientist 2' post form.
+9. 
